@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p>Here is some information about me, such as my background, education, and skills.</p>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Here are some of the projects I have worked on, with links to view them and learn more.</p>
+    </section>
+    <section id="blog">
+      <h2>Blog</h2>
+      <p>Here are some recent blog posts I have written.</p>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright © 2021 My Name</p>
+  </footer>
+</body>
+</html>
