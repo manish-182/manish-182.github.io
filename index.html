@@ -2,7 +2,71 @@
 <html>
 <head>
   <title>My Portfolio</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Themes */
+    :root {
+      --light-gray: #F0F0F0;
+      --creamy: #FFF9C4;
+      --dark: #333;
+    }
+    /* Default theme */
+    body {
+      background-color: var(--light-gray);
+      color: var(--dark);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      /* Add styles here for small screens */
+    }
+    /* Navigation */
+    header {
+      background-color: var(--light-gray);
+      padding: 20px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    nav li {
+      float: left;
+    }
+    nav a {
+      color: var(--dark);
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
+    }
+    nav a:hover {
+      background-color: var(--creamy);
+    }
+    /* Main content */
+    main {
+      margin: 20px;
+    }
+    section {
+      padding: 20px;
+      background-color: var(--creamy);
+      margin-bottom: 20px;
+    }
+    /* Footer */
+    footer {
+      background-color: var(--light-gray);
+      color: var(--dark);
+      text-align: center;
+      padding: 20px;
+    }
+    /* Theme switch */
+    .theme-switch {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -27,9 +91,24 @@
       <h2>Blog</h2>
       <p>Here are some recent blog posts I have written.</p>
     </section>
-  </main>
+
+</main>
   <footer>
     <p>Copyright © 2021 My Name</p>
   </footer>
+  
+  <div class="theme-switch">
+    <button onclick="switchTheme('light-gray')">Light Gray</button>
+    <button onclick="switchTheme('creamy')">Creamy</button>
+    <button onclick="switchTheme('dark')">Dark</button>
+  </div>
+
+  <script>
+    function switchTheme(theme) {
+      document.documentElement.style.setProperty('--light-gray', theme === 'light-gray' ? '#F0F0F0' : '#333');
+      document.documentElement.style.setProperty('--creamy', theme === 'creamy' ? '#FFF9C4' : '#333');
+      document.documentElement.style.setProperty('--dark', theme === 'dark' ? '#333' : '#F0F0F0');
+    }
+  </script>
 </body>
 </html>
