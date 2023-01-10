@@ -5,9 +5,9 @@
   <style>
     /* Themes */
     :root {
-      --light-gray: #F0F0F0;
-      --creamy: #FFF9C4;
-      --dark: #333;
+      --light-gray: #BBBBBB;
+      --creamy: #EEEEEE;
+      --dark: #333333;
     }
     /* Default theme */
     body {
@@ -54,19 +54,21 @@
       margin-bottom: 20px;
     }
     /* Footer */
-    footer {
+footer {
       background-color: var(--light-gray);
       color: var(--dark);
       text-align: center;
       padding: 20px;
     }
     /* Theme switch */
-    .theme-switch {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-    }
+    function switchTheme(theme) {
+    document.documentElement.style.setProperty('--light-gray', theme === 'light-gray' ? '#BBBBBB' : '#333333');
+    document.documentElement.style.setProperty('--creamy', theme === 'creamy' ? '#EEEEEE' : '#333333');
+    document.documentElement.style.setProperty('--dark', theme === 'dark' ? '#333333' : '#BBBBBB');
+}
+
   </style>
+
 </head>
 <body>
   <header>
